@@ -59,7 +59,7 @@ I am {HEIGHT}cm tall and I was born on {DAY} {MONTH} {YEAR}."""
 
 ## Übungsaufgabe 2 - Kontrollstrukturen und Input
 ### Aufgabe 1
-Entwickeln Sie ein Program, welches den BMI aus Benutzer-Inputs berechnet.
+Entwickeln Sie ein Programm, welches den BMI aus Benutzer-Inputs berechnet.
 
 Formel: $\mathrm{BMI} = \mathrm{Koerpergewicht (kg)} / \mathrm{Groesse (m)} ^ 2$
 
