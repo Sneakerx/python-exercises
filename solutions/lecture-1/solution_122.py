@@ -1,4 +1,5 @@
-# Pythagorean theorem: calculator for the hypotenuse of a right triangle
+"""Pythagorean theorem: calculator for the hypotenuse of a right triangle"""
+
 a = float(input("Please enter the length of side a: "))
 b = float(input("Please enter the length of side b: "))
 c = (a**2 + b**2) ** 0.5

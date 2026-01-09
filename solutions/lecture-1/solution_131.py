@@ -1,4 +1,6 @@
-# basic calculator based on user input using functions
+"""Basic calculator based on user input using functions"""
+
+
 def add(x, y):
     return x + y
 

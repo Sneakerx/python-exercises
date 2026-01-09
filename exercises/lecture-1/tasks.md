@@ -3,8 +3,8 @@
 ### Aufgabe 1
 Gegeben sind folgende Variablen:
 ```python
-firstName = "Mustermann"
-lastName = "Max"
+FIRST_NAME = "Mustermann"
+LAST_NAME = "Max"
 ```
 
 Schreiben Sie ein Programm, welches die Werte der beiden Variablen vertauscht, sodass Vor- und Nachname richtig zugeordnet sind.
@@ -13,16 +13,16 @@ Schreiben Sie ein Programm, welches die Werte der beiden Variablen vertauscht, s
 Gegeben ist das folgende Python Programm:
 
 ```python
-a = 42
-b = a
-c = a
-a = 10
-b = c
+A = 42
+B = A
+C = A
+A = 10
+B = C
 ```
 
 Welche Werte werden durch die folgende Zeile ausgegeben:
 
-`print(a, b, c)`
+`print(A, B, C)`
 
 ### Aufgabe 3
 Welche der folgenden Umwandlungen sind möglich und was ist das Ergebnis?
@@ -43,14 +43,17 @@ float("True")
 Wie lautet die Ausgabe des folgenden Programms?
 
 ```python
-firstName = "Lisa"
-lastName = "Mueller"
-height = 180
-day = 23
-month = "January"
-year = "1999"
+FIRST_NAME = "Lisa"
+LAST_NAME = "Mueller"
+HEIGHT = 180
+DAY = 23
+MONTH = "January"
+YEAR = "1999"
 
-print(f"""Hi, my name is {firstName} {lastName}.\nI am {height}cm tall and I was born on {day} {month} {year}.""")
+print(
+    f"""Hi, my name is {FIRST_NAME} {LAST_NAME}.
+I am {HEIGHT}cm tall and I was born on {DAY} {MONTH} {YEAR}."""
+)
 ```
 
 

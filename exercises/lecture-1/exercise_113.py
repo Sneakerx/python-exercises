@@ -1,3 +1,5 @@
+"""Demonstrating type conversions in Python."""
+
 int(5.5)
 float(-1)
 str(0.3)

@@ -1,2 +1,0 @@
-firstName = "Mustermann"
-lastName = "Max"

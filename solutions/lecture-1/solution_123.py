@@ -1,4 +1,5 @@
-# basic calculator based on user input
+"""Basic calculator based on user input"""
+
 value1 = float(input("Please enter the first number: "))
 operator = input("Please enter the operation (+, -, *, /): ")
 value2 = float(input("Please enter the second number: "))
