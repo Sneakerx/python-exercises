@@ -102,3 +102,26 @@ matrix[2][0]
 matrix[0]       
 matrix[2]
 ```
+
+## Übungsaufgabe 2 - Datenstrukturen
+### Aufgabe 1
+Was unterschiedet Tupel und Listen voneinander?
+Welche Vorteile bieten Tupel gegenüber Listen?
+
+
+### Aufgabe 2
+Was wird durch folgendes Programm ausgegeben?
+
+```python
+tupel = (0, 1, 2, 3, 3, 0)
+copy = tupel
+
+print(tupel[2])
+print(copy[5])
+print(tupel.index(0))
+index = tupel.index(3)
+print(copy[index])
+index = copy.count(3)
+print(tupel[index])
+print(5 in copy)
+```

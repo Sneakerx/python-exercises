@@ -20,7 +20,7 @@ values.insert(2, 3)
 print(values)  # Output: [7, 5, 3, 5, 3, 3, 2, 1, 0, 0]
 values.append(values.count(0))
 print(values)  # Output: [7, 5, 3, 5, 3, 3, 2, 1, 0, 0, 2]
-values.remove(values.index(3))  # Removes the first occurrence of 2
+values.remove(values.index(3))  # Removes first occurrence of the index of 3
 print(values)  # Output: [7, 5, 3, 5, 3, 3, 1, 0, 0, 2]
 values.clear()
 print(values)  # Output: []
