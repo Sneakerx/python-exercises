@@ -19,6 +19,6 @@ while running:
 # ... aber wird danach wieder auf True gesetzt.
 running = True
 while running:
-    running = input("Weitermachen? ")
-    if running != False:
+    running = input("Weitermachen? ")  # string
+    if running != False:  # string != bool
         running = True
