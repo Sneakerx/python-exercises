@@ -4,7 +4,7 @@ math: mathjax
 
 title: "Programmieren in Python"
 header: "Programmieren in Python - Vorlesung 1"
-footer: "Duale Hochschule Baden-Württemberg - Vorlesung Programmieren"
+footer: "Duale Hochschule Baden-Württemberg"
 
 theme: python_A4
 paginate: true
@@ -86,7 +86,7 @@ Es soll die Länge der Ankathete und Gegenkathete eingegeben werden.
 Als Ergebnis soll die Hypotenuse ausgegeben werden.
 
 
-### Aufgabe 3
+### Aufgabe 2.3
 Programmieren Sie einen Taschenrechner, welcher Plus, Minus, Mal und Geteilt rechnen kann. 
 Der Rechner soll mit zwei Zahlen arbeiten können.
 

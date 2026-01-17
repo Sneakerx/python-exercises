@@ -4,7 +4,7 @@ math: mathjax
 
 title: "Programmieren in Python"
 header: "Programmieren in Python - Vorlesung 2"
-footer: "Duale Hochschule Baden-Württemberg - Vorlesung Programmieren"
+footer: "Duale Hochschule Baden-Württemberg"
 
 theme: python_A4
 paginate: true
