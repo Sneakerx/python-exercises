@@ -1,82 +1,117 @@
-# Vorlesung 1
-## Übungsaufgabe 1 - Variablen
-### Aufgabe 1
-Gegeben sind folgende Variablen:
-```python
-FIRST_NAME = "Mustermann"
-LAST_NAME = "Max"
-```
+---
+marp: true
+math: mathjax
 
-Schreiben Sie ein Programm, welches die Werte der beiden Variablen vertauscht, sodass Vor- und Nachname richtig zugeordnet sind.
+title: "Programmieren in Python"
+header: "Programmieren in Python - Vorlesung 3"
+footer: "Duale Hochschule Baden-Württemberg"
 
-### Aufgabe 2
-Gegeben ist das folgende Python Programm:
+theme: python_A4
+paginate: true
 
-```python
-A = 42
-B = A
-C = A
-A = 10
-B = C
-```
+---
 
-Welche Werte werden durch die folgende Zeile ausgegeben:
+# Vorlesung 3
+## Übungsaufgabe 1 - Dateien lesen und schreiben
+### Aufgabe 1.1
 
-`print(A, B, C)`
-
-### Aufgabe 3
-Welche der folgenden Umwandlungen sind möglich und was ist das Ergebnis?
+Was macht das folgende Programm?
 
 ```python
-int(5.5)
-float(-1)
-str(0.3)
-bool(0.0001)
-str("False")
-int(False)
-bool('0')
-int("False")
-float("True")
+myGrades = []
+with open("grades.txt", "r") as grades:
+    for grade in grades:
+        myGrades.append(grade)
+
+print(myGrades)
 ```
 
-### Aufgabe 4
-Wie lautet die Ausgabe des folgenden Programms?
+### Aufgabe 1.2
+
+Das folgende Programm soll in die Datei `zutaten.txt` Zutaten eintragen. Finden und korrigieren Sie die Fehler.
 
 ```python
-FIRST_NAME = "Lisa"
-LAST_NAME = "Mueller"
-HEIGHT = 180
-DAY = 23
-MONTH = "January"
-YEAR = "1999"
-
-print(
-    f"""Hi, my name is {FIRST_NAME} {LAST_NAME}.
-I am {HEIGHT}cm tall and I was born on {DAY} {MONTH} {YEAR}."""
-)
+with open("zutaten.txt", "r+"):
+    zutaten.write("Butter\n")
+    zutaten.write("Zucker\n")
+zutaten.close()
 ```
 
+### Aufgabe 1.3
 
-## Übungsaufgabe 2 - Kontrollstrukturen und Input
-### Aufgabe 1
-Entwickeln Sie ein Programm, welches den BMI aus Benutzer-Inputs berechnet.
+Schreiben Sie den Code so, dass der Kontextmanager verwendet wird
 
-Formel: $\mathrm{BMI} = \mathrm{Koerpergewicht (kg)} / \mathrm{Groesse (m)} ^ 2$
+```python
+myMovies = []
+movies = open("movies.txt", "r")
+for movie in movies:
+    myMovies.append(movie)
+movies.close()
+```
 
-### Aufgabe 2
-Entwickeln Sie ein Programm welches den Satz des Pythagoras berechnet. 
-Es soll die Länge der Ankathete und Gegenkathete eingegeben werden. 
-Als Ergebnis soll die Hypotenuse ausgegeben werden.
+---
+
+### Aufgabe 1.4
+
+Entwickeln Sie ein einfaches Bank System, welches Einzahlen und Auszahlen über die Konsole ermöglicht. 
+Der Wert des Kontos soll in einer Datei gespeichert werden. Es ist ausreichend, den Kontostand beim Start zu lesen und beim Beenden des Programms zu schreiben.
+
+Implementieren Sie für jede Aktion eine Funktion:
+- Einzahlen
+- Abgeben
+- Guthaben anzeigen
+- Schließen und speichern
+
+## Übungsaufgaben 2 - Bibliotheken: Module und Pakete
+### Aufgabe 2.1
+
+Was unterscheidet ein Paket von einem Modul?
+
+### Aufgabe 2.2
+
+Berechnen Sie mithilfe der Standardbibliothek den größten gemeinsamen Teiler der Zahlen 112 und 220. Verwenden Sie das Modul `math`.
+
+### Aufgabe 2.3
+
+Schreiben Sie ein Programm, welches den aktuellen Systemnutzer mit einer Nachricht begrüßt. Verwenden Sie das Paket `os`.
+
+### Aufgabe 2.4
+
+Schreiben Sie ein Programm, welches die aktuelle Version des Python Interpreters ausgibt. Verwenden Sie das Modul `sys`.
+
+---
+
+### Aufgabe 2.5
+
+Schreiben Sie ein Programm, welches die aktuelle Zeit in folgendem Format ausgibt: Tag.Monat.Jahr Stunde:Minute:Sekunde. Nutzen Sie das Modul `datetime`.
 
 
-### Aufgabe 3
-Programmieren Sie einen Taschenrechner, welcher Plus, Minus, Mal und Geteilt rechnen kann. 
-Der Rechner soll mit zwei Zahlen arbeiten können.
 
+### Aufgabe 2.6
 
-## Übungsaufgabe 3 - Funktionen
-### Aufgabe 1
-Bearbeiten Sie den Taschenrechner aus Übung 2. 
-Das Programm soll mit verschiedenen Funktionen programmiert werden. 
-Für jede Rechenart soll eine Funktion vorhanden sein.
+Suchen Sie nach einer Funktion, welche aus einer Liste mit Zahlen von 1 bis 100 fünf zufällig auswählen kann.
 
+### Aufgabe 2.7
+
+Entwickeln Sie eine eigene Bibliothek (ein eigenes Modul) für die Aufgaben 3 bis 6. Es sollen alle Funktionalitäten der Aufgaben im Modul enthalten sein. Binden Sie das Modul in eine weitere Datei ein und führen Sie alle Methoden aus.
+
+## Übungsaufgabe 3 - Argumente und Kontrollstrukturen
+### Aufgabe 3.1
+
+Schreiben Sie eine Funktion, welche den Durchschnitt aller Input Werte berechnet. Als Parameter soll `*args` verwendet werden.
+
+### Aufgabe 3.2
+
+Schreiben sie eine Funktion, welche `Positional`, `*args` und `**kwargs` Parameter empfangen kann. Die Parameter sollen alle über die `print()` Funktion ausgegeben werden. Bei jedem Parameter soll ausgegeben werden, um welche Positional-Kategorie es sich handelt.
+
+---
+
+### Aufgabe 3.3
+
+Gegeben ist folgende Liste: 
+`numbers = [4, -2, 102, -5, -12, 3]`
+
+Es soll eine neue Liste erstellt werden, welche nur die Positiven Zahlen der gegebenen
+Liste enthält. Die Negativen Zahlen sollen entfernt werden.
+
+Schreiben Sie zwei Varianten des Programms. Eines mit einer "klassischen" for Schleife (mehrere Zeilen) und eines mit einer "vereinfachten" for Schleife (in einer Zeile).
