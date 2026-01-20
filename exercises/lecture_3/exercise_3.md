@@ -18,12 +18,12 @@ paginate: true
 Was macht das folgende Programm?
 
 ```python
-myGrades = []
+my_grades = []
 with open("grades.txt", "r") as grades:
     for grade in grades:
-        myGrades.append(grade)
+        my_grades.append(grade)
 
-print(myGrades)
+print(my_grades)
 ```
 
 ### Aufgabe 1.2
@@ -42,10 +42,10 @@ zutaten.close()
 Schreiben Sie den Code so, dass der Kontextmanager verwendet wird
 
 ```python
-myMovies = []
+my_movies = []
 movies = open("movies.txt", "r")
 for movie in movies:
-    myMovies.append(movie)
+    my_movies.append(movie)
 movies.close()
 ```
 
@@ -89,11 +89,11 @@ Schreiben Sie ein Programm, welches die aktuelle Zeit in folgendem Format ausgib
 
 ### Aufgabe 2.6
 
-Suchen Sie nach einer Funktion, welche aus einer Liste mit Zahlen von 1 bis 100 fünf zufällig auswählen kann.
+Suchen Sie im Modul `random` nach einer Funktion, welche aus einer Liste mit Zahlen von 1 bis 100 fünf zufällig auswählen kann.
 
 ### Aufgabe 2.7
 
-Entwickeln Sie eine eigene Bibliothek (ein eigenes Modul) für die Aufgaben 3 bis 6. Es sollen alle Funktionalitäten der Aufgaben im Modul enthalten sein. Binden Sie das Modul in eine weitere Datei ein und führen Sie alle Methoden aus.
+Entwickeln Sie eine eigene Bibliothek (ein eigenes Modul) für die Aufgaben 2.3 bis 2.6. Es sollen alle Funktionalitäten der Aufgaben im Modul enthalten sein. Binden Sie das Modul in eine weitere Datei ein und führen Sie alle Methoden aus.
 
 ## Übungsaufgabe 3 - Argumente und Kontrollstrukturen
 ### Aufgabe 3.1
@@ -102,7 +102,7 @@ Schreiben Sie eine Funktion, welche den Durchschnitt aller Input Werte berechnet
 
 ### Aufgabe 3.2
 
-Schreiben sie eine Funktion, welche `Positional`, `*args` und `**kwargs` Parameter empfangen kann. Die Parameter sollen alle über die `print()` Funktion ausgegeben werden. Bei jedem Parameter soll ausgegeben werden, um welche Positional-Kategorie es sich handelt.
+Schreiben sie eine Funktion, welche `positional`, `*args` und `**kwargs` Parameter empfangen kann. Die Parameter sollen alle über die `print()` Funktion ausgegeben werden. Bei jedem Parameter soll ausgegeben werden, um welche Positional-Kategorie es sich handelt.
 
 ---
 
