@@ -2,5 +2,5 @@
 
 with open("zutaten.txt", "r+"):
     zutaten.write("Butter\n")
-    zutaten.write("Zucker\n")
+    zutaten.write("Süßstoff\n")
 zutaten.close()

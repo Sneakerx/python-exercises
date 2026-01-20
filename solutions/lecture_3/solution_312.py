@@ -1,5 +1,5 @@
 """Open text file in read and write mode and add ingredients to the file."""
 
-with open("./data/lecture3/zutaten.txt", "r+") as zutaten:
+with open("zutaten.txt", "r+", encoding="utf-8") as zutaten:
     zutaten.write("Butter\n")
-    zutaten.write("Zucker\n")
+    zutaten.write("Süßstoff\n")
