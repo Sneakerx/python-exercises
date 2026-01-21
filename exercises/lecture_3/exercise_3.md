@@ -111,7 +111,7 @@ Schreiben sie eine Funktion, welche `positional`, `*args` und `**kwargs` Paramet
 Gegeben ist folgende Liste: 
 `numbers = [4, -2, 102, -5, -12, 3]`
 
-Es soll eine neue Liste erstellt werden, welche nur die Positiven Zahlen der gegebenen
-Liste enthält. Die Negativen Zahlen sollen entfernt werden.
+Es soll eine neue Liste erstellt werden, welche nur die positiven Zahlen der gegebenen
+Liste enthält. Die negativen Zahlen sollen entfernt werden.
 
 Schreiben Sie zwei Varianten des Programms. Eines mit einer "klassischen" for Schleife (mehrere Zeilen) und eines mit einer "vereinfachten" for Schleife (in einer Zeile).
