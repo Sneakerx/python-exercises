@@ -19,7 +19,7 @@ Was macht das folgende Programm?
 
 ```python
 my_grades = []
-with open("grades.txt", "r") as grades:
+with open("grades.txt", "r", encoding="utf-8") as grades:
     for grade in grades:
         my_grades.append(grade)
 
@@ -43,7 +43,7 @@ Schreiben Sie den Code so, dass der Kontextmanager verwendet wird
 
 ```python
 my_movies = []
-movies = open("movies.txt", "r")
+movies = open("movies.txt", "r", encoding="utf-8")
 for movie in movies:
     my_movies.append(movie)
 movies.close()
