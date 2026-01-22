@@ -6,7 +6,8 @@ def calculate_average(*values):
     length = len(values)
     total = sum(values)
 
-    return total / length
+    return total / length if length > 0 else "error: no values provided"
 
 
-calculate_average(1, 2, 3, 4, 5, 6)
+result = calculate_average(1, 2, 3, 4, 5, 6)
+print("Average:", result)
