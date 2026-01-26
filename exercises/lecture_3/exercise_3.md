@@ -58,7 +58,7 @@ Der Wert des Kontos soll in einer Datei gespeichert werden. Es ist ausreichend, 
 
 Implementieren Sie für jede Aktion eine Funktion:
 - Einzahlen
-- Abgeben
+- Abheben
 - Guthaben anzeigen
 - Schließen und speichern
 
