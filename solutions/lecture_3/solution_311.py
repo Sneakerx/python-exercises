@@ -6,9 +6,7 @@ reads the grades from the file and stores them in a list called `my_grades`.
 Finally, it prints the list of grades.
 """
 
-my_grades = []
-with open("grades.txt", "r", encoding="utf-8") as grades:
-    for grade in grades:
-        my_grades.append(grade)
+with open("./grades.txt", "r", encoding="utf-8") as grades:
+    my_grades = grades.readlines()
 
 print(my_grades)
