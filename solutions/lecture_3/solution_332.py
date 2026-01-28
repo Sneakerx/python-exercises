@@ -11,7 +11,7 @@ def print_param(param1, param2, *args, **kwargs):
         print(f"{index}: {value}")
 
     print("\nNon-Positional Keyword Arguments:")
-    for key, value in zip(list(kwargs.keys()), list(kwargs.values())):
+    for key, value in kwargs.items():
         print(f"Key: {key}, Value: {value}")
 
 
