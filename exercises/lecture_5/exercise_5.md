@@ -1,82 +1,88 @@
-# Vorlesung 1
-## Übungsaufgabe 1 - Variablen
-### Aufgabe 1
-Gegeben sind folgende Variablen:
-```python
-FIRST_NAME = "Mustermann"
-LAST_NAME = "Max"
-```
+---
+marp: true
+math: mathjax
 
-Schreiben Sie ein Programm, welches die Werte der beiden Variablen vertauscht, sodass Vor- und Nachname richtig zugeordnet sind.
+title: "Programmieren in Python"
+header: "Programmieren in Python - Vorlesung 5"
+footer: "Duale Hochschule Baden-Württemberg"
 
-### Aufgabe 2
-Gegeben ist das folgende Python Programm:
+theme: python_A4
+paginate: true
 
-```python
-A = 42
-B = A
-C = A
-A = 10
-B = C
-```
+---
 
-Welche Werte werden durch die folgende Zeile ausgegeben:
+# Vorlesung 5
+## Übungsaufgabe 1 - Exceptions
+### Aufgabe 1.1
 
-`print(A, B, C)`
-
-### Aufgabe 3
-Welche der folgenden Umwandlungen sind möglich und was ist das Ergebnis?
+Gegeben sind die folgenden Variablen und Datenstrukturen
 
 ```python
-int(5.5)
-float(-1)
-str(0.3)
-bool(0.0001)
-str("False")
-int(False)
-bool('0')
-int("False")
-float("True")
+name = "Nico"
+i = 42
+my_list = [i, name, True]
+j = 42
+book = {"angreifen": "attack", "schreiben": "write"}
 ```
 
-### Aufgabe 4
-Wie lautet die Ausgabe des folgenden Programms?
+Geben Sie für jede Zeile an, welche Art von Exception geworfen wird:
 
 ```python
-FIRST_NAME = "Lisa"
-LAST_NAME = "Mueller"
-HEIGHT = 180
-DAY = 23
-MONTH = "January"
-YEAR = "1999"
-
-print(
-    f"""Hi, my name is {FIRST_NAME} {LAST_NAME}.
-I am {HEIGHT}cm tall and I was born on {DAY} {MONTH} {YEAR}."""
-)
+int(i)                                                         
+float(name)
+my_list[3]
+i / (i - j)
+my_list[i - 40]
+print(f'Hallo {name}!")
+book["Maske"]
+  bool(name)      
+i / (j % 6)
+file = open("test.txt",'r')  # "test.txt" existiert nicht.
 ```
 
+### Aufgabe 1.2
 
-## Übungsaufgabe 2 - Kontrollstrukturen und Input
-### Aufgabe 1
-Entwickeln Sie ein Programm, welches den BMI aus Benutzer-Inputs berechnet.
+Welche Exception könnte in folgendem Programm geworfen werden?
+Ergänzen Sie eine except Anweisung um den Fehler abzufangen und geben Sie darin aus, warum der Fehler aufgetreten ist.
 
-Formel: $\mathrm{BMI} = \mathrm{Koerpergewicht (kg)} / \mathrm{Groesse (m)} ^ 2$
+```python
+names = {"Jürgen": "Müller", "Martin": "Freund", "Lisa": "Sonntag"}
 
-### Aufgabe 2
-Entwickeln Sie ein Programm welches den Satz des Pythagoras berechnet. 
-Es soll die Länge der Ankathete und Gegenkathete eingegeben werden. 
-Als Ergebnis soll die Hypotenuse ausgegeben werden.
+try:
+    first_name = input("Enter first name: ")
+    # KeyError, falls der Schlüssel nicht im Dictionary vorhanden ist
+    last_name = names[first_name]
+    print(f"{first_name} {last_name}")
+```
 
+---
 
-### Aufgabe 3
-Programmieren Sie einen Taschenrechner, welcher Plus, Minus, Mal und Geteilt rechnen kann. 
-Der Rechner soll mit zwei Zahlen arbeiten können.
+### Aufgabe 1.3
 
+Welche Exceptions können in folgendem Programm geworfen werden?
+Ergänzen Sie mehrere except Anweisungen, um die Fehler abzufangen und geben Sie darin aus, warum der Fehler aufgetreten ist.
 
-## Übungsaufgabe 3 - Funktionen
-### Aufgabe 1
-Bearbeiten Sie den Taschenrechner aus Übung 2. 
-Das Programm soll mit verschiedenen Funktionen programmiert werden. 
-Für jede Rechenart soll eine Funktion vorhanden sein.
+```python
+try:
+    weight = int(input("Gewicht (in kg): "))
+    height = float(input("Körpergröße (in m): "))
+    bmi = weight / height**2
+    print(f"Dein BMI ist {bmi}")
+```
 
+### Aufgabe 1.4
+
+Gegeben ist das folgende Programm:
+
+```python
+class Zahl:
+    def __init__(self, wert):
+        self.wert = wert
+    
+try:
+    wert = int(input("Geben Sie einen Wert an: "))
+    zahl = Zahl(wert)
+    ergebnis = 42 / zahl.wert
+```
+
+Sorgen Sie mit einem finally Block dafür, dass das Objekt zahl immer gelöscht wird. Gib dem Nutzer eine Nachricht aus, dass das Objekt gelöscht wurde. Sollte das Objekt nicht gelöscht werden können, z.B. wenn das Objekt nicht erzeugt werden konnte, entsteht ein NameError. Dieser muss auch im finally Block abgefangen werden.

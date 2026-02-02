@@ -13,7 +13,7 @@ paginate: true
 
 # Vorlesung 4
 ## Übungsaufgabe 1 - Objektorientierung
-### Aufgabe 1
+### Aufgabe 1.1
 
 - Was sind die Vorteile von objektorientierter Programmierung? 
 - Wann sollte man sie nutzen?
