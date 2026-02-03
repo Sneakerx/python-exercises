@@ -126,10 +126,11 @@ Info: Die Funktionalität der Kucoin API ist sehr umfangreich. Sie benötigen ke
 
 **Beispiel:** Request für BTC in EURO: https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-EUR
 
+---
+
 ### Aufgabe 2.2
 
-Überlegen Sie welche Fehlermöglichkeiten es gibt (z.B. Nutzereingaben) und fangen Sie diese mit
-Exceptions ab.
+Überlegen Sie welche Fehlermöglichkeiten es gibt (z.B. Nutzereingaben) und fangen Sie diese mit Exceptions ab.
 
 ### Aufgabe 2.3
 
