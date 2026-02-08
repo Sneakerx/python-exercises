@@ -1,82 +1,46 @@
-# Vorlesung 1
-## Übungsaufgabe 1 - Variablen
-### Aufgabe 1
-Gegeben sind folgende Variablen:
-```python
-FIRST_NAME = "Mustermann"
-LAST_NAME = "Max"
-```
+---
+marp: true
+math: mathjax
 
-Schreiben Sie ein Programm, welches die Werte der beiden Variablen vertauscht, sodass Vor- und Nachname richtig zugeordnet sind.
+title: "Programmieren in Python"
+header: "Programmieren in Python - Vorlesung 5"
+footer: "Duale Hochschule Baden-Württemberg"
 
-### Aufgabe 2
-Gegeben ist das folgende Python Programm:
+theme: python_A4
+paginate: true
 
-```python
-A = 42
-B = A
-C = A
-A = 10
-B = C
-```
+---
 
-Welche Werte werden durch die folgende Zeile ausgegeben:
+# Vorlesung 6
+## Übungsaufgabe 1 - Unittests
+### Aufgabe 1.1
 
-`print(A, B, C)`
-
-### Aufgabe 3
-Welche der folgenden Umwandlungen sind möglich und was ist das Ergebnis?
+Gegeben ist folgendes Modul: `circle.py`
 
 ```python
-int(5.5)
-float(-1)
-str(0.3)
-bool(0.0001)
-str("False")
-int(False)
-bool('0')
-int("False")
-float("True")
+from math import pi
+
+def calculate_area(radius):
+    return pi * (radius**2)
+
+def calculate_circumference(radius):
+    return 2 * pi * radius
 ```
 
-### Aufgabe 4
-Wie lautet die Ausgabe des folgenden Programms?
+Schreiben Sie Unittests für die beiden Funktionen.
+Es sollen alle realistisch möglichen Edge-Cases getestet werden.
 
-```python
-FIRST_NAME = "Lisa"
-LAST_NAME = "Mueller"
-HEIGHT = 180
-DAY = 23
-MONTH = "January"
-YEAR = "1999"
+### Aufgabe 1.2
 
-print(
-    f"""Hi, my name is {FIRST_NAME} {LAST_NAME}.
-I am {HEIGHT}cm tall and I was born on {DAY} {MONTH} {YEAR}."""
-)
-```
+Wie Sie hoffentlich gemerkt haben, ist das Modul aus Aufgabe 1 nicht gut gegen Fehleingaben abgesichert. Dementsprechend sollten einige Unittests fehlschlagen.
 
+Entwickeln Sie das Modul circle.py weiter, sodass falsche Typen mit einem TypeError und negative Werte mit einem ValueError versehen werden.
 
-## Übungsaufgabe 2 - Kontrollstrukturen und Input
-### Aufgabe 1
-Entwickeln Sie ein Programm, welches den BMI aus Benutzer-Inputs berechnet.
+Testen Sie, ob Ihre Unittests jetzt erfolgreich sind und erstellen Sie gegbenefalls neue Unittests, die auf die die neuen Fehler abtesten.
 
-Formel: $\mathrm{BMI} = \mathrm{Koerpergewicht (kg)} / \mathrm{Groesse (m)} ^ 2$
+### Aufgabe 1.3
+Lassen Sie die `coverage` der Tests berechnen und erreichen Sie 100% Abdeckung.
 
-### Aufgabe 2
-Entwickeln Sie ein Programm welches den Satz des Pythagoras berechnet. 
-Es soll die Länge der Ankathete und Gegenkathete eingegeben werden. 
-Als Ergebnis soll die Hypotenuse ausgegeben werden.
+---
 
-
-### Aufgabe 3
-Programmieren Sie einen Taschenrechner, welcher Plus, Minus, Mal und Geteilt rechnen kann. 
-Der Rechner soll mit zwei Zahlen arbeiten können.
-
-
-## Übungsaufgabe 3 - Funktionen
-### Aufgabe 1
-Bearbeiten Sie den Taschenrechner aus Übung 2. 
-Das Programm soll mit verschiedenen Funktionen programmiert werden. 
-Für jede Rechenart soll eine Funktion vorhanden sein.
-
+## Übungsaufgabe 2 - Unittests Patchen
