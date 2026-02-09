@@ -45,7 +45,6 @@ Lassen Sie die `coverage` der Tests berechnen und erreichen Sie 100% Abdeckung.
 
 ## Übungsaufgabe 2 - Unittests Patchen
 ### Aufgabe 2.1
-### Aufgabe 3
 
 Gegeben ist ein einfaches Pokemon Spiel. Es handel sich hierbei nur um eine `main()` Funktion, die den User Input behandelt. Alle anderen Funktionen sind nur "Dummy" Funktionen. Schreiben Sie einen Tests für die `main()` Funktion. Die anderen Funktionen müssen nicht getestet werden. Versuchen Sie, alle relevanten Optionen zu testen.
 
