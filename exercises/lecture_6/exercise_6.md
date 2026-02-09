@@ -44,3 +44,55 @@ Lassen Sie die `coverage` der Tests berechnen und erreichen Sie 100% Abdeckung.
 ---
 
 ## Übungsaufgabe 2 - Unittests Patchen
+### Aufgabe 2.1
+### Aufgabe 3
+
+Gegeben ist ein einfaches Pokemon Spiel. Es handel sich hierbei nur um eine `main()` Funktion, die den User Input behandelt. Alle anderen Funktionen sind nur "Dummy" Funktionen. Schreiben Sie einen Tests für die `main()` Funktion. Die anderen Funktionen müssen nicht getestet werden. Versuchen Sie, alle relevanten Optionen zu testen.
+
+```python
+# game.py
+
+import time
+
+def create_new_pokemon():
+    # DUMMY FUNCTION -> Will never exit
+    while True:
+        pass
+
+def attack_pokemon(poke_list):
+    # DUMMY FUNCTION -> Will never exit
+    while True:
+        pass
+
+def welcome():
+    print("Welcome to the game")
+
+def main():
+    game = True
+    pokemon_storage = []
+
+    welcome()
+    while game:
+        choice = input(
+            "Please select\n1: Create new pokemon\n2: Attack a pokemon\nQ: Quit Game\n"
+        )
+
+        if choice == "1":
+            print("Create Pokemon")
+            new_pokemon = create_new_pokemon()
+            pokemon_storage.append(new_pokemon)
+        elif choice == "2":
+            print("Attack Pokemon")
+            attack_pokemon(pokemon_storage)
+        elif choice in ("q", "Q"):
+            print("Bye")
+            game = False   
+        else:
+            print("Invalid option")
+
+        time.sleep(1)
+
+if __name__ == "__main__":
+    main()
+
+```
