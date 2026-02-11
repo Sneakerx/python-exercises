@@ -1,82 +1,35 @@
-# Vorlesung 1
-## Übungsaufgabe 1 - Variablen
-### Aufgabe 1
-Gegeben sind folgende Variablen:
-```python
-FIRST_NAME = "Mustermann"
-LAST_NAME = "Max"
-```
+---
+marp: true
+math: mathjax
 
-Schreiben Sie ein Programm, welches die Werte der beiden Variablen vertauscht, sodass Vor- und Nachname richtig zugeordnet sind.
+title: "Programmieren in Python"
+header: "Programmieren in Python - Vorlesung 7"
+footer: "Duale Hochschule Baden-Württemberg"
 
-### Aufgabe 2
-Gegeben ist das folgende Python Programm:
+theme: python_A4
+paginate: true
 
-```python
-A = 42
-B = A
-C = A
-A = 10
-B = C
-```
+---
 
-Welche Werte werden durch die folgende Zeile ausgegeben:
+# Vorlesung 7
+## Übungsaufgabe 1 - Statische Code-Analyse
+### Aufgabe 1.1
+Gezeigt ist ein kurzes Python-Skript, das gegen PEP 8 verstößt und mit pylint korrigiert werden soll.
 
-`print(A, B, C)`
-
-### Aufgabe 3
-Welche der folgenden Umwandlungen sind möglich und was ist das Ergebnis?
 
 ```python
-int(5.5)
-float(-1)
-str(0.3)
-bool(0.0001)
-str("False")
-int(False)
-bool('0')
-int("False")
-float("True")
+def addNumbers(x,y): return x+y
+
+def Say_Hello(): print("Hallo, Welt!") 
+
+class exampleclass:
+  def __init__(self,value): self.Value=value
+  def getvalue(self): return self.Value
 ```
 
-### Aufgabe 4
-Wie lautet die Ausgabe des folgenden Programms?
+## Übungsaufgabe 2 - Logging
+### Aufgabe 2.1
 
-```python
-FIRST_NAME = "Lisa"
-LAST_NAME = "Mueller"
-HEIGHT = 180
-DAY = 23
-MONTH = "January"
-YEAR = "1999"
+Erstellen Sie eine einfache Mathematik Bibliothek `math_lib.py`, welche die Funkionen `add()` und `sub()` beinhaltet und einige Info und Fehlermeldungen ausgibt. Dabei soll der Logger aus dem Hautprogramm genutzt werden.
 
-print(
-    f"""Hi, my name is {FIRST_NAME} {LAST_NAME}.
-I am {HEIGHT}cm tall and I was born on {DAY} {MONTH} {YEAR}."""
-)
-```
-
-
-## Übungsaufgabe 2 - Kontrollstrukturen und Input
-### Aufgabe 1
-Entwickeln Sie ein Programm, welches den BMI aus Benutzer-Inputs berechnet.
-
-Formel: $\mathrm{BMI} = \mathrm{Koerpergewicht (kg)} / \mathrm{Groesse (m)} ^ 2$
-
-### Aufgabe 2
-Entwickeln Sie ein Programm welches den Satz des Pythagoras berechnet. 
-Es soll die Länge der Ankathete und Gegenkathete eingegeben werden. 
-Als Ergebnis soll die Hypotenuse ausgegeben werden.
-
-
-### Aufgabe 3
-Programmieren Sie einen Taschenrechner, welcher Plus, Minus, Mal und Geteilt rechnen kann. 
-Der Rechner soll mit zwei Zahlen arbeiten können.
-
-
-## Übungsaufgabe 3 - Funktionen
-### Aufgabe 1
-Bearbeiten Sie den Taschenrechner aus Übung 2. 
-Das Programm soll mit verschiedenen Funktionen programmiert werden. 
-Für jede Rechenart soll eine Funktion vorhanden sein.
-
+Erstellen Sie das dazugehörige Hauptprogramm `main.py`, welches einen Logger konfiguriert und die `math_lib` importiert. Von hier sollen die beiden Funktionen aufgerufen werden können.
