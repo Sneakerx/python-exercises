@@ -3,7 +3,7 @@ marp: true
 math: mathjax
 
 title: "Programmieren in Python"
-header: "Programmieren in Python - Vorlesung 5"
+header: "Programmieren in Python - Vorlesung 6"
 footer: "Duale Hochschule Baden-Württemberg"
 
 theme: python_A4
