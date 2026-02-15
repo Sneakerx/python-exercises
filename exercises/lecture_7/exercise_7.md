@@ -33,3 +33,7 @@ class exampleclass:
 Erstellen Sie eine einfache Mathematik Bibliothek `math_lib.py`, welche die Funkionen `add()` und `sub()` beinhaltet und einige Info und Fehlermeldungen ausgibt. Dabei soll der Logger aus dem Hautprogramm genutzt werden.
 
 Erstellen Sie das dazugehörige Hauptprogramm `main.py`, welches einen Logger konfiguriert und die `math_lib` importiert. Von hier sollen die beiden Funktionen aufgerufen werden können.
+
+## Übungsaufgabe 3 - Debugging
+### Aufgabe 3.1
+Setzen Sie im Hauptprogramm an den Anfang der `main()` einen `breakpoint()`. Steppen Sie sich durch die Funktion. Ändern Sie im Debugger die Variable `c` auf einen gültigen Zahl-Wert.
