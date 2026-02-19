@@ -1,4 +1,4 @@
-"""Cefine a custom exception IsNotPrimeError that is
+"""Define a custom exception IsNotPrimeError that is
 raised when the user inputs a non-prime number."""
 
 
